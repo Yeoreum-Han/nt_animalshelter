@@ -29,7 +29,7 @@ export default function SelectResult() {
             const ENC_KEY = process.env.NEXT_PUBLIC_API_ENC_KEY
             const totalData = 223
 
-            const response = await fetch(`${API_URL}/${animal}/${city}/selectResult/api?numOfRows=${totalData}&pageNo=1&_type=json&serviceKey=${ENC_KEY}`)
+            const response = await fetch(`${API_URL}?numOfRows=${totalData}&pageNo=1&_type=json&serviceKey=${ENC_KEY}`)
             const data = await response.json();
 
             const lists = data.response.body.items.item as Info[]

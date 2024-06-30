@@ -2,7 +2,7 @@ import { NextResponse } from "next/server"
    
   export async function GET() {
 
-    const API_URL = process.env.NEXT_PUBLIC_DATA_URL
+    const API_URL = process.env.NEXT_PUBLIC_DOMAIN_URL
     const ENC_KEY = process.env.NEXT_PUBLIC_API_ENC_KEY
     // 전체 데이터 개수 data.response.body.items.item.totalCount값
     const totalData = 223
