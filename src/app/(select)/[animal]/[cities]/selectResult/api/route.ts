@@ -8,7 +8,7 @@ import { NextRequest, NextResponse } from "next/server"
     const ENC_KEY = process.env.NEXT_PUBLIC_API_ENC_KEY
     // 전체 데이터 개수 data.response.body.items.item.totalCount값
     const totalData = 223
-    const res = await fetch(`${API_URL}/${animal}/${cities}/selectResult/api?numOfRows=${totalData}&pageNo=1&_type=json&serviceKey=${ENC_KEY}`)
+    const res = await fetch(`${API_URL}?numOfRows=${totalData}&pageNo=1&_type=json&serviceKey=${ENC_KEY}`)
     const data = await res.json()
 
     return NextResponse.json({data})
