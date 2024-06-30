@@ -27,7 +27,6 @@ export default function SearchResult() {
             const lists = data.response.body.items.item
             // 지역 keyword를 포함하는 데이터만 
             const locLists = lists.filter((list: Info) => list.careAddr && list.careAddr.startsWith(locKeyword))
-
             setResultData(locLists)
             setIsLoading(false)
         }
