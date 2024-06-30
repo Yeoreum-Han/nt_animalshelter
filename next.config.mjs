@@ -4,11 +4,11 @@ const nextConfig = {
         return [
             {
                 source: '/:aniaml/:cities/selectResult/api',
-                destination: '/:aniaml/:cities/selectResult',
+                destination: `${process.env.NEXT_PUBLIC_DATA_URL}?numOfRows=223&pageNo=1&_type=json&serviceKey=${process.env.NEXT_PUBLIC_API_ENC_KEY}`,
             },
             {
                 source: '/searchResult/api',
-                destination: '/searchResult',
+                destination: `${process.env.NEXT_PUBLIC_DATA_URL}?numOfRows=223&pageNo=1&_type=json&serviceKey=${process.env.NEXT_PUBLIC_API_ENC_KEY}`,
             },
 
         ]
