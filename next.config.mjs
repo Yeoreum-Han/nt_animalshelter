@@ -11,12 +11,12 @@ const nextConfig = {
             //     destination: '/searchResult',
             // },
             {
-                source: '/searchResult/api',
-                destination: '/searchResult',
+                source: '/:animal/:cities/selectResult/api',
+                destination: '/:animal/:cities/selectResult',
             },
             {
-                source: '/:animal/:cities/api',
-                destination: '/:animal/:cities/selectResult',
+                source: '/searchResult/api',
+                destination: '/searchResult',
             },
 
         ]
