@@ -23,12 +23,7 @@ export default function SelectResult() {
 
     useEffect(() => {
         async function fetchData() {
-            // const API_URL = process.env.NEXT_PUBLIC_DATA_URL
-            // const ENC_KEY = process.env.NEXT_PUBLIC_API_ENC_KEY
-            // const totalData = 223
-
-            // const response = await fetch(`${API_URL}?numOfRows=${totalData}&pageNo=1&_type=json&serviceKey=${ENC_KEY}`)
-            const response = await fetch('/api/proxy')
+            const response = await fetch('/api/search')
             const data = await response.json();
 
             const lists = data.response.body.items.item as Info[]
