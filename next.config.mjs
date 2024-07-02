@@ -11,12 +11,8 @@ const nextConfig = {
             //     destination: '/searchResult',
             // },
             {
-                source: '/:animal/:cities/selectResult/api',
-                destination: '/:animal/:cities/selectResult',
-            },
-            {
-                source: '/searchResult/api',
-                destination: '/searchResult',
+                source: '/api/proxy',
+                destination: `${process.env.NEXT_PUBLIC_DATA_URL}?numOfRows=223&pageNo=1&_type=json&serviceKey=${process.env.NEXT_PUBLIC_API_ENC_KEY}`,
             },
 
         ]
