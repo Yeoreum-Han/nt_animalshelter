@@ -23,6 +23,7 @@ export default function SelectResult() {
 
     useEffect(() => {
         async function fetchData() {
+            // source로 fetch
             const response = await fetch('/api/search')
             const data = await response.json();
 
